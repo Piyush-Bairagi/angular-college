@@ -10,7 +10,11 @@
             <button class="log-in">Log In</button>
         </div>
     </nav>
-    
+    <h3>Add Student</h3>
+    <div class="addstudent">
+        <input type="text" #inputStudent>
+        <button type="button" class="addstudentinput" (click)="addStudent(inputStudent.value)">Add</button>
+    </div>
     <h2>List of Students:</h2>
     <table>
         <tr>
@@ -25,6 +29,12 @@
             <td><button type="button">Edit</button></td>
             <td><button type="button">Remove</button></td>
         </tr>
-        
+        <tr>
+            <td>{{studentName}}</td>
+            <td>CSE</td>
+            <td>Indore</td>
+            <td><button type="button">Edit</button></td>
+            <td><button type="button">Remove</button></td>
+        </tr>
     </table>
 </header>

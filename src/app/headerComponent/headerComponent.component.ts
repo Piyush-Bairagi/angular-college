@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
     styleUrls: [ './headerComponent.component.css' ]
 })
 export class HeaderComponent {
-    
+    studentName:string = "Piyush";
+
+    addStudent(input:string) {
+        this.studentName = input;
+    }
  }

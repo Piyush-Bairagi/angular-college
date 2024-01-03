@@ -21,3 +21,18 @@
     margin-right: 10px;
 }
 
+.addstudent {
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.addstudentinput {
+    height: 20px;
+    margin-left: 20px;
+}
+
+table th, td {
+    padding-left: 30px;
+    padding-right: 30px;
+}
