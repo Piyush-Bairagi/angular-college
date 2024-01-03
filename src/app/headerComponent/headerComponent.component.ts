@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
     studentName:string = "Piyush";
+    inputBoxValue:string = "Bairagi";
 
     addStudent(input:string) {
         this.studentName = input;

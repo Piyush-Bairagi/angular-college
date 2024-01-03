@@ -12,7 +12,7 @@
     </nav>
     <h3>Add Student</h3>
     <div class="addstudent">
-        <input type="text" #inputStudent>
+        <input type="text" #inputStudent [value]="inputBoxValue">
         <button type="button" class="addstudentinput" (click)="addStudent(inputStudent.value)">Add</button>
     </div>
     <h2>List of Students:</h2>
@@ -21,13 +21,6 @@
             <th>Name</th>
             <th>Stream</th>
             <th>Address</th>
-        </tr>
-        <tr>
-            <td>Shaksham</td>
-            <td>CSE</td>
-            <td>Indore</td>
-            <td><button type="button">Edit</button></td>
-            <td><button type="button">Remove</button></td>
         </tr>
         <tr>
             <td>{{studentName}}</td>
