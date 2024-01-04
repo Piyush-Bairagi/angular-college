@@ -33,7 +33,7 @@
     <br><hr>
     <h3>If Else</h3>
     <h4>Are all CSE student? : </h4>
-    <span *ngIf="true then ifBlock else elseBlock"></span>
+    <span *ngIf="areAllCSEStudent; then ifBlock else elseBlock"></span>
     <ng-template #ifBlock>
         <p>Yes</p>
     </ng-template>
