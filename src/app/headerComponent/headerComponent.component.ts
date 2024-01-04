@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
     studentName:string = "Piyush";
     inputBoxValue:string = "Bairagi";
+    areAllCSEStudent:boolean = true;
 
     addStudent(input:string) {
         this.studentName = input;
