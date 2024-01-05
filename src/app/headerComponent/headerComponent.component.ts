@@ -19,6 +19,6 @@ export class HeaderComponent {
 
     addStudent(input:string) {
         this.studentName = input;
-        
+        this.studentDetails.push({name: input, branch: 'CSE', address: 'Indore'});
     }
  }
