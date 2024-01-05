@@ -22,8 +22,8 @@
             <th>Stream</th>
             <th>Address</th>
         </tr>
-        <tr>
-            <td>{{studentName}}</td>
+        <tr *ngFor="let student of studentDetails">
+            <td>{{student.name}}</td>
             <td>CSE</td>
             <td>Indore</td>
             <td><button type="button">Edit</button></td>
@@ -40,4 +40,15 @@
     <ng-template #elseBlock>
         <p>No</p>
     </ng-template>
+    <hr>
+    <div [ngSwitch]="stream">
+        <h2>No. of Students of {{stream}} Branch:</h2>
+        <h3 *ngSwitchCase="'CSE'">120</h3>
+        <h3 *ngSwitchCase="'IT'">100</h3>
+        <h3 *ngSwitchCase="'CE'">120</h3>
+        <h3 *ngSwitchCase="'EC'">100</h3>
+        <h3 *ngSwitchCase="'EX'">110</h3>
+        <h3 *ngSwitchDefault>50</h3>
+    </div>
+    <hr>
 </header>
