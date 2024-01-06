@@ -10,6 +10,7 @@ export class HeaderComponent {
     inputBoxValue:string = "Bairagi";
     areAllCSEStudent:boolean = true;
     stream:string = "CSE";
+    backgroundColour= "White";
     studentDetails = [
         {name: 'Piyush', branch: 'CSE', address: 'Pune'},
         {name: 'Ayush', branch: 'BCA', address: 'Indore'},
@@ -20,5 +21,9 @@ export class HeaderComponent {
     addStudent(input:string) {
         this.studentName = input;
         this.studentDetails.push({name: input, branch: 'CSE', address: 'Indore'});
+    }
+
+    changeStyle() {
+        this.backgroundColour = "SkyBlue";
     }
  }

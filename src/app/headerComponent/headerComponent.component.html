@@ -16,7 +16,7 @@
         <button type="button" class="addstudentinput" (click)="addStudent(inputStudent.value)">Add</button>
     </div>
     <h2>List of Students:</h2>
-    <table>
+    <table [style.backgroundColor]="backgroundColour">
         <tr>
             <th>Name</th>
             <th>Stream</th>
@@ -30,6 +30,7 @@
             <td><button type="button">Remove</button></td>
         </tr>
     </table>
+    <button (click)="changeStyle()">Change Background</button>
     <br><hr>
     <h3>If Else</h3>
     <h4>Are all CSE student? : </h4>
