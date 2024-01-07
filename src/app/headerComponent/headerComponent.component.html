@@ -10,11 +10,16 @@
             <button class="log-in">Log In</button>
         </div>
     </nav>
+
     <h3>Add Student</h3>
-    <div class="addstudent">
-        <input type="text" #inputStudent [value]="inputBoxValue">
-        <button type="button" class="addstudentinput" (click)="addStudent(inputStudent.value)">Add</button>
-    </div>
+    <form #addStudentForm="ngForm" (ngSubmit)="addStudent(addStudentForm)">
+        <input type="text" ngModel placeholder="Enter Your Name" name="studentName"><br><br>
+        <input type="text" ngModel placeholder="Enter Stream" name="studentStream"><br><br>
+        <input type="text" ngModel placeholder="Enter Address" name="studentAddress"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <hr>
+    
     <h2>List of Students:</h2>
     <table [style.backgroundColor]="backgroundColour">
         <tr>
@@ -24,8 +29,8 @@
         </tr>
         <tr *ngFor="let student of studentDetails">
             <td>{{student.name}}</td>
-            <td>CSE</td>
-            <td>Indore</td>
+            <td>{{student.branch}}</td>
+            <td>{{student.address}}</td>
             <td><button type="button">Edit</button></td>
             <td><button type="button">Remove</button></td>
         </tr>

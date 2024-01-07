@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
     selector: 'headerComponent',
@@ -6,9 +7,8 @@ import { Component } from '@angular/core';
     styleUrls: [ './headerComponent.component.css' ]
 })
 export class HeaderComponent {
-    studentName:string = "Piyush";
-    inputBoxValue:string = "Bairagi";
-    areAllCSEStudent:boolean = true;
+
+    areAllCSEStudent:boolean = false;
     stream:string = "CSE";
     backgroundColour= "White";
     studentDetails = [
@@ -18,9 +18,8 @@ export class HeaderComponent {
         {name: 'Shubham', branch: 'CE', address: 'Hyderabad'},
     ];
 
-    addStudent(input:string) {
-        this.studentName = input;
-        this.studentDetails.push({name: input, branch: 'CSE', address: 'Indore'});
+    addStudent(input:NgForm) {
+        this.studentDetails.push({name: input.value.studentName, branch: input.value.studentStream, address: input.value.studentAddress});
     }
 
     changeStyle() {
