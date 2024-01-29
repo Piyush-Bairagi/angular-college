@@ -9,26 +9,26 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   title = 'College';
-
+  navTitle = 'Angular'
   areAllCSEStudent:boolean = false;
-    stream:string = "CSE";
-    backgroundColour= "White";
-    studentDetails = [
-        {name: 'Piyush', branch: 'CSE', address: 'Pune'},
-        {name: 'Ayush', branch: 'BCA', address: 'Indore'},
-        {name: 'Aditya', branch: 'IT', address: 'Indore'},
-        {name: 'Shubham', branch: 'CE', address: 'Hyderabad'},
-    ];
+  stream:string = "CSE";
+  backgroundColour= "White";
+  studentDetails = [
+      {name: 'Piyush', branch: 'CSE', address: 'Pune'},
+      {name: 'Ayush', branch: 'BCA', address: 'Indore'},
+      {name: 'Aditya', branch: 'IT', address: 'Indore'},
+      {name: 'Shubham', branch: 'CE', address: 'Hyderabad'},
+  ];
 
-    addStudent(input:NgForm) {
-        this.studentDetails.push({name: input.value.studentName, branch: input.value.studentStream, address: input.value.studentAddress});
-    }
+  addStudent(input:NgForm) {
+      this.studentDetails.push({name: input.value.studentName, branch: input.value.studentStream, address: input.value.studentAddress});
+  }
 
-    removeItem(name:string) {
-        this.studentDetails = this.studentDetails.filter(item => item.name !== name);
-    }
+  removeItem(name:string) {
+      this.studentDetails = this.studentDetails.filter(item => item.name !== name);
+  }
 
-    changeStyle() {
-        this.backgroundColour = "SkyBlue";
-    }
+  changeStyle() {
+      this.backgroundColour = "SkyBlue";
+  }
 }
