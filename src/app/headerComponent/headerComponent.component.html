@@ -10,4 +10,8 @@
             <button class="log-in">Log In</button>
         </div>
     </nav>
+    <div class="updateNavTitleDiv">
+        <input type="text" placeholder="Update Nav Title" #inputToUpdateNavTitle />
+        <button (click)="updateNavTitleEvent.emit(inputToUpdateNavTitle.value)">Update Nav Title</button>
+    </div>
 </header>

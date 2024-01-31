@@ -31,4 +31,8 @@ export class AppComponent {
   changeStyle() {
       this.backgroundColour = "SkyBlue";
   }
+
+  updateNavTitle(item:string) {
+	  this.navTitle = item;
+  }
 }

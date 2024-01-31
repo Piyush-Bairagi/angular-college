@@ -1,4 +1,4 @@
-<headerComponent [navHeading]="navTitle"></headerComponent>
+<headerComponent [navHeading]="navTitle" (updateNavTitleEvent)="updateNavTitle($event)" ></headerComponent>
 <main>
     <ngb-alert [dismissible]="true">
         <strong>Warning!</strong> Angular Boostrap.
