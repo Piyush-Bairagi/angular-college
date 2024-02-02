@@ -49,5 +49,8 @@
         <h3 *ngSwitchCase="'EX'">110</h3>
         <h3 *ngSwitchDefault>50</h3>
     </div>
-    <hr>
+    <hr><br>
+    <h2>Two Way Binding:</h2>
+    <input type="text" [(ngModel)]="twoWayBindingVariableName">
+    <h4>{{twoWayBindingVariableName}}</h4>
 </main>

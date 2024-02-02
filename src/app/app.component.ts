@@ -13,6 +13,7 @@ export class AppComponent {
   areAllCSEStudent:boolean = false;
   stream:string = "CSE";
   backgroundColour= "White";
+  twoWayBindingVariableName:string="";
   studentDetails = [
       {name: 'Piyush', branch: 'CSE', address: 'Pune'},
       {name: 'Ayush', branch: 'BCA', address: 'Indore'},
