@@ -51,6 +51,8 @@
     </div>
     <hr><br>
     <h2>Two Way Binding:</h2>
-    <input type="text" [(ngModel)]="twoWayBindingVariableName">
+    <input type="text" [(ngModel)]="twoWayBindingVariableName" #inputBox>
     <h4>{{twoWayBindingVariableName}}</h4>
+    <button (click)="showPropertyValue(inputBox.value)">GetInputUsingTemplateReferenceVariable</button>
+    <br><hr><br>
 </main>

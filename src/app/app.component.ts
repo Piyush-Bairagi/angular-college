@@ -34,6 +34,10 @@ export class AppComponent {
   }
 
   updateNavTitle(item:string) {
-	  this.navTitle = item;
+	    this.navTitle = item;
+  }
+
+  showPropertyValue(value:string){
+      console.warn(value);
   }
 }
