@@ -54,5 +54,13 @@
     <input type="text" [(ngModel)]="twoWayBindingVariableName" #inputBox>
     <h4>{{twoWayBindingVariableName}}</h4>
     <button (click)="showPropertyValue(inputBox.value)">GetInputUsingTemplateReferenceVariable</button>
-    <br><hr><br>
+    <br><br><hr>
+    <h2>Pipes:</h2>
+    <p>Pipe - {{ navTitle | uppercase}}</p>
+    <p>Passing Parameters - {{ navTitle | slice : 3 : 6}}</p>
+    <p>Using Multiple Pipes - {{ navTitle | slice : 3 : 6 | uppercase}}</p>
+    <p>Object without JSON Pipe - {{ studentDetails }}</p>
+    <p>Object with JSON Pipe - {{ studentDetails | json }}</p>
+    <p>Currency Pipe - {{ 100 | currency:'INR' }}</p>
+    <hr>
 </main>
