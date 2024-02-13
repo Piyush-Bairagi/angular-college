@@ -62,5 +62,6 @@
     <p>Object without JSON Pipe - {{ studentDetails }}</p>
     <p>Object with JSON Pipe - {{ studentDetails | json }}</p>
     <p>Currency Pipe - {{ 100 | currency:'INR' }}</p>
+    <p>Convert INR to USD - {{ 120 | currency:'INR' }} = ${{ 120 | inrToUsd : 83 }}</p>
     <hr>
 </main>
